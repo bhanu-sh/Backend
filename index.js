@@ -8,6 +8,8 @@ const app = express();
 const port = 5000;
 
 //Middlewares
+app.use(express.json());
+
 app.use('/user', userRouter);
 
 //routes
