@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/add', (req, res) => {
     console.log(req.body);
-    res.send('response from user Router');
+    res.send('response from add user Router');
 })
 
 router.get('/getall', (req, res) => {
