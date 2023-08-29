@@ -2,6 +2,7 @@
 const express = require('express');
 
 const userRouter = require('./routers/userRouter');
+const productRouter = require('./routers/productRouter');
 
 //initialize express
 const app = express();
@@ -11,6 +12,7 @@ const port = 5000;
 app.use(express.json());
 
 app.use('/user', userRouter);
+app.use('/product', productRouter);
 
 //routes
 app.get('/', (req, res) => {

@@ -1,5 +1,5 @@
 const express = require('express');
-const Model = require('../models/userModel');
+const Model = require('../models/productModel');
 
 const router = express.Router();
 
@@ -52,7 +52,7 @@ router.get('/getbyid/:id', (req, res) => {
     });
 });
 
-router.put('/update/:id', (req, res) => {
+router.put("/update/:id", (req, res) => {
 
     Model.findByIdAndUpdate(req.params.id, req.body, { new : true })
     .then((result) => {
@@ -64,7 +64,7 @@ router.put('/update/:id', (req, res) => {
     });
 });
 
-router.delete('/delete/:id', (req, res) => {
+router.delete("/delete/:id", (req, res) => {
     
     Model.findByIdAndDelete(req.params.id)
     .then((result) => {
